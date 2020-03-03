@@ -11,3 +11,10 @@ IMAGES_STORE = 'E:\图片'
 如果对图片大小有要求可以在settings.py中设置过滤图片大小(单位是像素，默认最小值为0，即不过滤)
 MIN_WIDTH = 0 
 MIN_HEIGHT = 0
+
+启动：
+在settings.py中设置好参数后，选择你需要爬取的渠道，然后运行 run.py
+
+
+
+
