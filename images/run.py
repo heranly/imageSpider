@@ -11,5 +11,3 @@ process.crawl('quanjing')
 process.crawl('weibo')
 process.start()
 
-#pip freeze>requirements.txt
-import pipreqs
