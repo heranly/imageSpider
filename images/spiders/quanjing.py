@@ -18,17 +18,14 @@ class QuanjingSpider(scrapy.Spider):
 
         headers["Referer"] = "https://www.quanjing.com/search.aspx?q={keyword}".format(keyword=keyword)
 
-        for page in range(1,pages+1):
-            timestamp = int(time.time()*1000)
-            url = basic_url.format(keyword=keyword,page=page,timestamp=timestamp)
-            yield scrapy.Request(url,headers=headers,meta={"keyword":keyword})
+        for page in range(1, pages + 1):
+            timestamp = int(time.time() * 1000)
+            url = basic_url.format(keyword=keyword, page=page, timestamp=timestamp)
+            yield scrapy.Request(url, headers=headers, meta={"keyword": keyword})
 
     def parse(self, response):
         item = ImagesItem()
-        img_urls_list = re.findall(r'"imgurl":"(.*?)"',response.text)  # 每页的图片链接列表
+        img_urls_list = re.findall(r'"imgurl":"(.*?)"', response.text)  # 每页的图片链接列表
         item['image_urls'] = img_urls_list
         item['keyword'] = response.meta['keyword']
         yield item
-
-
-

@@ -165,7 +165,7 @@ ITEM_PIPELINES = {
 #爬取的关键词
 KEYWORD = "美女"
 #爬取页数，每个渠道每页的不一样，百度每页:30张，google,quanjign,veer,vcg每页:100张，weibo每页:相册数*12张
-PAGE = 10
+PAGE = 5
 #存储路径，图片最终路径：E:\图片\KEYWOED\xxx.jpg
 IMAGES_STORE = 'E:\图片'
 
